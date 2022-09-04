@@ -23,7 +23,8 @@ app.get('/',function(req, res){
             "port":process.env.DB_PORT,
             "username":process.env.DB_USERNAME,
             "password":"*************"
-        }
+        },
+        "version":"20220904:1"
     }
     res.json(result)
 })
