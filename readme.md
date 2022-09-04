@@ -64,7 +64,7 @@ kubectl create secret docker-registry cr-mzavaletav --docker-server='user.mycr.i
 
 Create deployment and service in k8s:
 ```cmd
-ubectl apply -f service.yml
+kubectl apply -f service.yml
 ```
 
 get port by test, using *kubectl get svc apinodedemo-nodeport*
