@@ -24,7 +24,8 @@ app.get('/',function(req, res){
             "username":process.env.DB_USERNAME,
             "password":"*************"
         },
-        "version":"20220904:1"
+        "version":"20220904:1",
+        "informar":process.env.LISTA_CORREOS
     }
     res.json(result)
 })
