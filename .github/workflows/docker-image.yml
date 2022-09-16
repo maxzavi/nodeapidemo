@@ -25,4 +25,4 @@ jobs:
       with:
           context: .
           push: true
-          tags: mzavaletav/apinodedemo:1       
+          tags: mzavaletav/apinodedemo:3       
