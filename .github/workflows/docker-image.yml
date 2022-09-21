@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Generate build number
+      uses: einaregilsson/build-number@v3
+      with:
+        token: ${{secrets.github_token}}        
+    - name: Print new build number
+      run: echo "Build number is $BUILD_NUMBER"    
+
     - uses: actions/checkout@v3
     - name: Log in to Docker Hub
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -25,4 +32,4 @@ jobs:
       with:
           context: .
           push: true
-          tags: mzavaletav/apinodedemo:3       
+          tags: mzavaletav/apinodedemo:$BUILD_NUMBER
