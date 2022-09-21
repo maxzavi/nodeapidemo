@@ -32,4 +32,4 @@ jobs:
       with:
           context: .
           push: true
-          tags: mzavaletav/apinodedemo:$BUILD_NUMBER
+          tags: mzavaletav/apinodedemo:${{ steps.buildnumber.outputs.build_number }}
